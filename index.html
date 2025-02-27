@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesh Rider Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="logo">
+                <img src="logo.png" alt="Mesh Rider Logo" class="logo-img">
+            </div>
+            <h2>Mesh Rider App</h2>
+            <p>Easily configure, monitor and maintain your Doodle Labs Mesh Rider Radios.</p>
+            <div class="logo">
+                <img src="doodle-labs.png" alt="Doodle Labs Logo" class="logo-img">
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <h2>Login</h2>
+            <form>
+                <label class="input-label">IP Address</label>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-network-wired"></i></span>  <!-- IP Address -->
+                    <input type="text" placeholder="10.223.106" value="10.223.106">
+                </div>
+
+                <label class="input-label">Username</label>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-user"></i></span>   <!-- Username -->
+                    <input type="text" placeholder="user" value="user">
+                </div>
+
+                <label class="input-label">Password</label>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-lock"></i></span>   <!-- Password -->
+                    <input type="password" id="password" placeholder="DoodleSmartRadio" value="DoodleSmartRadio">
+                    <span class="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span> <!-- Eye Icon -->                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="save">
+                    <label for="save">Save Credentials</label>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
