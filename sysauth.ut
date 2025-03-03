@@ -15,49 +15,51 @@
                 <p>{{ _('Invalid username and/or password! Please try again.') }}</p>
             </div>
         {% endif %}
-    <div class="nhcontainer">
-        <!-- Left Panel -->
-        <div class="left-panel">
-            <div class="logo">
-                <img src="{{ media }}/logo_mod.png" alt="Mesh Rider Logo" class="logo-img">
+    <div class="full-screen">
+        <div class="nhcontainer">
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <div class="logo">
+                    <img src="{{ media }}/logo_mod.png" alt="Mesh Rider Logo" class="logo-img">
+                </div>
+                <h2>Mesh Rider App</h2>
+                <p>Easily configure, monitor and maintain your Doodle Labs Mesh Rider Radios.</p>
+                <div class="logo">
+                    <img src="{{ media }}/doodle-labs_mod.png" alt="Doodle Labs Logo" class="logo-img">
+                </div>
             </div>
-            <h2>Mesh Rider App</h2>
-            <p>Easily configure, monitor and maintain your Doodle Labs Mesh Rider Radios.</p>
-            <div class="logo">
-                <img src="{{ media }}/doodle-labs_mod.png" alt="Doodle Labs Logo" class="logo-img">
+
+            <!-- Right Panel -->
+            <div class="right-panel">
+                <h2>Login</h2>
+                    <label class="input-label">IP Address</label>
+                    <div class="input-box">
+                        <span class="icon">&#127760;</span> <!-- Network Wired Icon -->
+                        <input type="text" placeholder="192.168.11.22" value="192.168.11.22">
+                    </div>
+
+                    <label class="input-label" for="luci_username">Username</label>
+                    <div class="input-box">
+                        <span class="icon">&#128100;</span> <!-- User Icon -->
+                        <input type="text" name="luci_username" id="luci_username"  placeholder="root" value="root">
+                    </div>
+
+                    <label class="input-label"for="luci_password" >Password</label>
+                    <div class="input-box">
+                        <span class="icon">&#128274;</span> <!-- Lock Icon -->
+                        <input type="password" id="luci_password" placeholder="admin" value="admin" name="luci_password">
+                        <span class="toggle-password" onclick="togglePassword()">&#128065;</span> <!-- Eye Icon -->            
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="save">
+                        <label for="save">Save Credentials</label>
+                    </div>
+                    <div class="cbi-page-actions">
+                        <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Right Panel -->
-        <div class="right-panel">
-            <h2>Login</h2>
-                <label class="input-label">IP Address</label>
-                <div class="input-box">
-                    <span class="icon">&#127760;</span> <!-- Network Wired Icon -->
-                    <input type="text" placeholder="192.168.11.22" value="192.168.11.22">
-                </div>
-
-                <label class="input-label" for="luci_username">Username</label>
-                <div class="input-box">
-                    <span class="icon">&#128100;</span> <!-- User Icon -->
-                    <input type="text" name="luci_username" id="luci_username"  placeholder="root" value="root">
-                </div>
-
-                <label class="input-label"for="luci_password" >Password</label>
-                <div class="input-box">
-                    <span class="icon">&#128274;</span> <!-- Lock Icon -->
-                    <input type="password" id="luci_password" placeholder="admin" value="admin" name="luci_password">
-                    <span class="toggle-password" onclick="togglePassword()">&#128065;</span> <!-- Eye Icon -->            
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" id="save">
-                    <label for="save">Save Credentials</label>
-                </div>
-                <div class="cbi-page-actions">
-                    <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
-                </div>
-        </div>
-    </div>
     </form>
 
 {%

@@ -6,7 +6,7 @@
     <title>Mesh Rider Login</title>
     <style type="text/css">
         /* Global Styles */
-        body {
+        .full-screen {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #111;
@@ -15,6 +15,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 100vw;
             overflow: hidden;
         }
 
@@ -179,50 +180,52 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Left Panel -->
-        <div class="left-panel">
-            <div class="logo">
-                <img src="logo_mod.png" alt="Mesh Rider Logo" class="logo-img">
+    <div class="full-screen">
+        <div class="container">
+            <!-- Left Panel -->
+            <div class="left-panel">
+                <div class="logo">
+                    <img src="logo_mod.png" alt="Mesh Rider Logo" class="logo-img">
+                </div>
+                <h2>Mesh Rider App</h2>
+                <p>Easily configure, monitor and maintain your Doodle Labs Mesh Rider Radios.</p>
+                <div class="logo">
+                    <img src="doodle-labs_mod.png" alt="Doodle Labs Logo" class="logo-img">
+                </div>
             </div>
-            <h2>Mesh Rider App</h2>
-            <p>Easily configure, monitor and maintain your Doodle Labs Mesh Rider Radios.</p>
-            <div class="logo">
-                <img src="doodle-labs_mod.png" alt="Doodle Labs Logo" class="logo-img">
+
+            <!-- Right Panel -->
+            <div class="right-panel">
+                <h2>Login</h2>
+                <form>
+                    <label class="input-label">IP Address</label>
+                    <div class="input-box">
+                        <span class="icon">&#127760;</span> <!-- Network Wired Icon -->
+                        <input type="text" placeholder="192.168.11.22" value="192.168.11.22">
+                    </div>
+
+                    <label class="input-label">Username</label>
+                    <div class="input-box">
+                        <span class="icon">&#128100;</span> <!-- User Icon -->
+                        <input type="text" placeholder="user" value="user">
+                    </div>
+
+                    <label class="input-label">Password</label>
+                    <div class="input-box">
+                        <span class="icon">&#128274;</span> <!-- Lock Icon -->
+                        <input type="password" id="password" placeholder="DoodleSmartRadio" value="DoodleSmartRadio">
+                        <span class="toggle-password" onclick="togglePassword()">&#128065;</span> <!-- Eye Icon -->                
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="save">
+                        <label for="save">Save Credentials</label>
+                    </div>
+                    <div class="cbi-page-actions">
+                        <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
+                    </div>
+                    <!-- <button type="submit">Login</button> -->
+                </form>
             </div>
-        </div>
-
-        <!-- Right Panel -->
-        <div class="right-panel">
-            <h2>Login</h2>
-            <form>
-                <label class="input-label">IP Address</label>
-                <div class="input-box">
-                    <span class="icon">&#127760;</span> <!-- Network Wired Icon -->
-                    <input type="text" placeholder="192.168.11.22" value="192.168.11.22">
-                </div>
-
-                <label class="input-label">Username</label>
-                <div class="input-box">
-                    <span class="icon">&#128100;</span> <!-- User Icon -->
-                    <input type="text" placeholder="user" value="user">
-                </div>
-
-                <label class="input-label">Password</label>
-                <div class="input-box">
-                    <span class="icon">&#128274;</span> <!-- Lock Icon -->
-                    <input type="password" id="password" placeholder="DoodleSmartRadio" value="DoodleSmartRadio">
-                    <span class="toggle-password" onclick="togglePassword()">&#128065;</span> <!-- Eye Icon -->                
-                </div>
-                <div class="checkbox-container">
-                    <input type="checkbox" id="save">
-                    <label for="save">Save Credentials</label>
-                </div>
-                <div class="cbi-page-actions">
-                    <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
-                </div>
-                <!-- <button type="submit">Login</button> -->
-            </form>
         </div>
     </div>
 </body>

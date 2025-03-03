@@ -1,6 +1,6 @@
 
 /* Global Styles */
-body {
+.full-screen {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #111;
@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 /* Container */
