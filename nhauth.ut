@@ -201,7 +201,6 @@
         <!-- Right Panel -->
         <div class="right-panel">
             <h2>Login</h2>
-            <form>
                 <label class="input-label">IP Address</label>
                 <div class="input-box">
                     <span class="icon">&#127760;</span> <!-- Network Wired Icon -->
@@ -227,9 +226,8 @@
                 <div class="cbi-page-actions">
                     <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
     </form>
 </body>
 
