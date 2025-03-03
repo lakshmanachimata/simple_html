@@ -117,7 +117,7 @@
         }
 
         /* Button */
-        button {
+        .btn {
             width: 100%;
             padding: 12px;
             background: #007bff;
@@ -130,8 +130,8 @@
             height: 60px;
         }
 
-        button:hover {
-            background: #0056b3;
+        .btn:hover {
+            background: #02418a;
         }
 
         /* Responsive */
@@ -218,8 +218,10 @@
                     <input type="checkbox" id="save">
                     <label for="save">Save Credentials</label>
                 </div>
-
-                <button type="submit">Login</button>
+                <div class="cbi-page-actions">
+                    <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
+                </div>
+                <!-- <button type="submit">Login</button> -->
             </form>
         </div>
     </div>

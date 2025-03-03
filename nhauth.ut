@@ -117,7 +117,7 @@
         }
 
         /* Button */
-        button {
+        .btn {
             width: 100%;
             padding: 12px;
             background: #007bff;
@@ -130,8 +130,8 @@
             height: 60px;
         }
 
-        button:hover {
-            background: #0056b3;
+        .btn:hover {
+            background: #011123;
         }
 
         /* Responsive */
@@ -179,6 +179,12 @@
     </style>
 </head>
 <body>
+    <form method="post">
+        {% if (fuser): %}
+            <div class="alert-message warning">
+                <p>{{ _('Invalid username and/or password! Please try again.') }}</p>
+            </div>
+        {% endif %}
     <div class="container">
         <!-- Left Panel -->
         <div class="left-panel">
@@ -218,11 +224,13 @@
                     <input type="checkbox" id="save">
                     <label for="save">Save Credentials</label>
                 </div>
-
-                <button type="submit">Login</button>
+                <div class="cbi-page-actions">
+                    <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
+                </div>
             </form>
         </div>
     </div>
+    </form>
 </body>
 
 {%
