@@ -55,7 +55,7 @@
                         <label for="save">Save Credentials</label>
                     </div>
                     <div class="cbi-page-actions">
-                        <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
+                        <input type="submit" value="Login" class="nhbtn cbi-button cbi-button-apply" />
                     </div>
                 </div>
             </div>
