@@ -1,7 +1,7 @@
 
 /* Global Styles */
 
-#maincontent > .main {
+#maincontent > .container {
     width: 100% !important;
     height: 100% !important;
     background: #111 !important;
