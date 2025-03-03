@@ -207,16 +207,16 @@
                     <input type="text" placeholder="192.168.11.22" value="192.168.11.22">
                 </div>
 
-                <label class="input-label">Username</label>
+                <label class="input-label" for="luci_username">Username</label>
                 <div class="input-box">
                     <span class="icon">&#128100;</span> <!-- User Icon -->
-                    <input type="text" placeholder="user" value="user">
+                    <input type="text" name="luci_username" id="luci_username" placeholder="root" value="root">
                 </div>
 
-                <label class="input-label">Password</label>
+                <label class="input-label" for="luci_password" >Password</label>
                 <div class="input-box">
                     <span class="icon">&#128274;</span> <!-- Lock Icon -->
-                    <input type="password" id="password" placeholder="DoodleSmartRadio" value="DoodleSmartRadio" name="luci_password">
+                    <input type="password" name="luci_password" id="luci_password" placeholder="admin" value="admin">
                     <span class="toggle-password" onclick="togglePassword()">&#128065;</span> <!-- Eye Icon -->            
                 </div>
                 <div class="checkbox-container">
@@ -245,9 +245,9 @@
 
 <script type="text/javascript">
     function togglePassword() {
-        var passwordField = document.getElementById("password");
+        var passwordField = document.getElementById("luci_password");
         var passwordFieldType = passwordField.getAttribute("type");
-        if (passwordFieldType === "password") {
+        if (passwordFieldType === "luci_password") {
             passwordField.setAttribute("type", "text");
         } else {
             passwordField.setAttribute("type", "password");
