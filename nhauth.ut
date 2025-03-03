@@ -211,7 +211,7 @@
                 <label class="input-label">Password</label>
                 <div class="input-box">
                     <span class="icon">&#128274;</span> <!-- Lock Icon -->
-                    <input type="password" id="password" placeholder="DoodleSmartRadio" value="DoodleSmartRadio">
+                    <input type="password" id="password" placeholder="DoodleSmartRadio" value="DoodleSmartRadio" name="luci_password">
                     <span class="toggle-password" onclick="togglePassword()">&#128065;</span> <!-- Eye Icon -->                </div>
 
                 <div class="checkbox-container">
@@ -224,6 +224,19 @@
         </div>
     </div>
 </body>
+
+{%
+	let https_ports = uci.get('uhttpd', 'main', 'listen_https') ?? [];
+
+	https_ports = uniq(filter(
+		map(
+			(type(https_ports) == 'string') ? split(https_port, /\s+/) : https_ports,
+			e => +match(e, /\d+$/)?.[0]
+		),
+		p => (p >= 0 && p <= 65535)
+	));
+%}
+
 <script type="text/javascript">
     function togglePassword() {
         var passwordField = document.getElementById("password");
@@ -234,5 +247,24 @@
             passwordField.setAttribute("type", "password");
         }
     }
+    var input = document.getElementsByName('luci_password')[0];
+
+    if (input)
+        input.focus();
+
+    if (document.location.protocol != 'https:') {
+        {{ https_ports }}.forEach(function(port) {
+            var url = 'https://' + window.location.hostname + ':' + port + window.location.pathname;
+            var img = new Image();
+
+            img.onload = function() { window.location = url };
+            img.src = 'https://' + window.location.hostname + ':' + port + '{{ resource }}/icons/loading.gif?' + Math.random();
+
+            setTimeout(function() { img.src = '' }, 5000);
+        });
+    }
+
+    // Always set the basic menu as default
+    document.cookie = "render_basic_menu" + "=" + ("true") + "; path=/";
 </script>
 </html>
