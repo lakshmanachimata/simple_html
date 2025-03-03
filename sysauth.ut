@@ -87,17 +87,17 @@
     if (input)
         input.focus();
 
-    // if (document.location.protocol != 'https:') {
-    //     {{ https_ports }}.forEach(function(port) {
-    //         var url = 'https://' + window.location.hostname + ':' + port + window.location.pathname;
-    //         var img = new Image();
+    if (document.location.protocol != 'https:') {
+         {{ https_ports }}.forEach(function(port) {
+            var url = 'https://' + window.location.hostname + ':' + port + window.location.pathname;
+            var img = new Image();
 
-    //         img.onload = function() { window.location = url };
-    //         img.src = 'https://' + window.location.hostname + ':' + port + '{{ resource }}/icons/loading.gif?' + Math.random();
+            img.onload = function() { window.location = url };
+            img.src = 'https://' + window.location.hostname + ':' + port + '{{ resource }}/icons/loading.gif?' + Math.random();
 
-    //         setTimeout(function() { img.src = '' }, 5000);
-    //     });
-    // }
+            setTimeout(function() { img.src = '' }, 5000);
+        });
+    }
 
     // Always set the basic menu as default
     document.cookie = "render_basic_menu" + "=" + ("true") + "; path=/";
