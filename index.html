@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesh Rider Login</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -28,19 +26,19 @@
             <form>
                 <label class="input-label">IP Address</label>
                 <div class="input-box">
-                    <span class="icon"><i class="fas fa-network-wired"></i></span>  <!-- IP Address -->
+                    <span class="icon">&#128246;</span> <!-- Network Wired Icon -->
                     <input type="text" placeholder="10.223.106" value="10.223.106">
                 </div>
 
                 <label class="input-label">Username</label>
                 <div class="input-box">
-                    <span class="icon"><i class="fas fa-user"></i></span>   <!-- Username -->
+                    <span class="icon">&#128100;</span> <!-- User Icon -->
                     <input type="text" placeholder="user" value="user">
                 </div>
 
                 <label class="input-label">Password</label>
                 <div class="input-box">
-                    <span class="icon"><i class="fas fa-lock"></i></span>   <!-- Password -->
+                    <span class="icon">&#128274;</span> <!-- Lock Icon -->
                     <input type="password" id="password" placeholder="DoodleSmartRadio" value="DoodleSmartRadio">
                     <span class="toggle-password" onclick="togglePassword()"><i class="fas fa-eye"></i></span> <!-- Eye Icon -->                </div>
 
@@ -54,4 +52,15 @@
         </div>
     </div>
 </body>
+<script type="text/javascript">
+    function togglePassword() {
+        var passwordField = document.getElementById("password");
+        var passwordFieldType = passwordField.getAttribute("type");
+        if (passwordFieldType === "password") {
+            passwordField.setAttribute("type", "text");
+        } else {
+            passwordField.setAttribute("type", "password");
+        }
+    }
+</script>
 </html>
