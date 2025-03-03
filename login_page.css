@@ -1,10 +1,7 @@
 
 /* Global Styles */
 
-.main .container {
-    margin-top: 0px !important;
-    margin: 0px !important;
-    padding: 0px !important;
+#maincontent > .main {
     width: 100% !important;
     height: 100% !important;
     background: #111 !important;
@@ -12,6 +9,11 @@
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+}
+.main .container {
+    margin-top: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 .full-screen {
