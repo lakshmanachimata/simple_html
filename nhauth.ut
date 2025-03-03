@@ -204,7 +204,7 @@
             <form>
                 <label class="input-label">IP Address</label>
                 <div class="input-box">
-                    <span class="icon">&#128246;</span> <!-- Network Wired Icon -->
+                    <span class="icon">&#127760;</span> <!-- Network Wired Icon -->
                     <input type="text" placeholder="192.168.11.22" value="192.168.11.22">
                 </div>
 
