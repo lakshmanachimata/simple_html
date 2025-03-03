@@ -111,7 +111,7 @@
 
 /* Button */
 .nhbtn {
-    width: 100%;
+    width: 100% !important;
     padding: 12px;
     background: #007bff;
     color: white;
