@@ -210,13 +210,13 @@
                 <label class="input-label" for="luci_username">Username</label>
                 <div class="input-box">
                     <span class="icon">&#128100;</span> <!-- User Icon -->
-                    <input type="text" name="luci_username" id="luci_username" placeholder="root" value="root">
+                    <input type="text" name="luci_username" id="luci_username"  placeholder="root" value="root">
                 </div>
 
-                <label class="input-label" for="luci_password" >Password</label>
+                <label class="input-label"for="luci_password" >Password</label>
                 <div class="input-box">
                     <span class="icon">&#128274;</span> <!-- Lock Icon -->
-                    <input type="password" name="luci_password" id="luci_password" placeholder="admin" value="admin">
+                    <input type="password" id="luci_password" placeholder="admin" value="admin" name="luci_password">
                     <span class="toggle-password" onclick="togglePassword()">&#128065;</span> <!-- Eye Icon -->            
                 </div>
                 <div class="checkbox-container">
@@ -226,8 +226,8 @@
                 <div class="cbi-page-actions">
                     <input type="submit" value="Login" class="btn cbi-button cbi-button-apply" />
                 </div>
-            </div>
         </div>
+    </div>
     </form>
 </body>
 
