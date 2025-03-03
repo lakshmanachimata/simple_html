@@ -60,7 +60,8 @@
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+</form>
 
 {%
 	let https_ports = uci.get('uhttpd', 'main', 'listen_https') ?? [];
@@ -74,20 +75,11 @@
 	));
 %}
 
-<script type="text/javascript">
-    function togglePassword() {
-        var passwordField = document.getElementById("luci_password");
-        var passwordFieldType = passwordField.getAttribute("type");
-        if (passwordFieldType === "password") {
-            passwordField.setAttribute("type", "text");
-        } else {
-            passwordField.setAttribute("type", "password");
-        }
-    }
-    var input = document.getElementsByName('luci_password')[0];
-    document.title = "Mesh Rider Login";
-    if (input)
-        input.focus();
+<script type="text/javascript">//<![CDATA[
+	var input = document.getElementsByName('luci_password')[0];
+
+	if (input)
+		input.focus();
 
     if (document.location.protocol != 'https:') {
          {{ https_ports }}.forEach(function(port) {
@@ -100,8 +92,17 @@
             setTimeout(function() { img.src = '' }, 5000);
         });
     }
-
+    function togglePassword() {
+        var passwordField = document.getElementById("password");
+        var passwordFieldType = passwordField.getAttribute("type");
+        if (passwordFieldType === "password") {
+            passwordField.setAttribute("type", "text");
+        } else {
+            passwordField.setAttribute("type", "password");
+        }
+    }
     // Always set the basic menu as default
     document.cookie = "render_basic_menu" + "=" + ("true") + "; path=/";
-</script>
-{# include('footer') #}
+//]]></script>
+
+{% include('footer') %}
