@@ -157,6 +157,9 @@
     background: #011123;
 }
 
+.footer-logos {
+    display: none;
+}
 /* Responsive */
 @media (max-width: 768px) {
     .nhcontainer {
