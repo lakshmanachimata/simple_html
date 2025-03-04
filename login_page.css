@@ -92,7 +92,8 @@
 h2 {
     padding-bottom: 10px;
     font-size: 1.8rem;
-    margin: 2rem, 0, 0, 0;
+    margin: 2rem, 0, 0;
+    border-bottom: none !important;
 }
 .input-label {
     display: block;
