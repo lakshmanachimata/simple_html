@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 92%;
+    width: 90%;
 }
 .mesh-network {
     display: flex;
@@ -24,7 +24,7 @@ body {
 }
 
 .mesh-network .section {
-    flex: 0 1 calc(50% - 2rem);
+    flex: 0 1 calc(50% - 0rem);
     box-sizing: border-box;
     margin: 0.5rem;
 }
@@ -113,9 +113,14 @@ select {
 }
 
 .gps-associated .section {
-    flex: 0 1 calc(50% - 2rem);
+    flex: 0 1 calc(50% - 0rem);
     box-sizing: border-box;
     margin: 0.5rem;
+}
+
+.gps-associated .gps {
+    flex: 0 1 30%;
+    box-sizing: border-box;
 }
 
 .gps-info {
@@ -125,6 +130,10 @@ select {
     font-size: 16px;
 }
 
+.gps-associated .associated {
+    flex: 0 1 70%;
+    box-sizing: border-box;
+}
 /* Associated Radios */
 .radio-info {
     margin-top: 10px;
@@ -158,4 +167,24 @@ select {
     font-size: 14px;
     margin-top: 10px;
     color: #ddd;
+}
+.floating-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.floating-btn .btn-icon {
+    font-size: 18px;
+    margin-right: 8px;
 }
