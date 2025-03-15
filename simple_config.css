@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.secions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 92%;
+}
+.mesh-network {
+    display: flex;
+    flex-direction: row;
+}
+
+.mesh-network .section {
+    flex: 0 1 calc(50% - 2rem);
+    box-sizing: border-box;
+    margin: 0.5rem;
+}
+
+.section {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.info,
+.signal-bars,
+.radio-name,
+.host {
+    flex: 1;
+}
+
+.label {
+    font-weight: bold;
+    color: #888;
+}
+
+.dropdowns,
+.signal-strength,
+.signal-strength{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown {
+    margin-bottom: 10px;
+}
+
+.dropdown label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+}
+
+.signal {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.signal-bars {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.signal-strength {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.gps-associated {
+    display: flex;
+    flex-direction: row;
+}
+
+.gps-associated .section {
+    flex: 0 1 calc(50% - 2rem);
+    box-sizing: border-box;
+    margin: 0.5rem;
+}
+
+.gps-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+/* Associated Radios */
+.radio-info {
+    margin-top: 10px;
+}
+
+.radio-header,
+.txrate-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.signal-strength {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+.mac-address {
+    font-size: 14px;
+    color: #bbb;
+    margin: 5px 0;
+}
+
+.tx-rate {
+    flex: 1;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #ddd;
+}

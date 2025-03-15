@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="simple_config.css">
+    <script defer src="simple_config.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="secions">
+            <div class="mesh-network">
+                <div class="section mesh-rider">
+                    <h2><span class="icon">📶</span> Mesh Rider Status</h2>
+                    <div class="status">
+                        <div class="info">
+                            <p><span class="label">SSID</span><br>simpleconfig</p>
+                            <p><span class="label">Mode</span><br>Mesh Point</p>
+                            <p><span class="label">Mesh Display</span><br>00:30:1A:3B:90:25</p>
+                        </div>
+                        <div class="dropdowns">
+                            <div class="dropdown">
+                                <label>Frequency Band</label>
+                                <select>
+                                    <option>0.915 GHz</option>
+                                </select>
+                            </div>
+                            <div class="dropdown">
+                                <label>Channel</label>
+                                <select>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div class="dropdown">
+                                <label>Bandwidth</label>
+                                <select>
+                                    <option>5 MHz</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signal">
+                        <span class="signal-bars">📶 Signal quality</span> <span class="signal-strength">-33/-95 dBm</span>
+                    </div>
+                </div>
+                <div class="section wifi">
+                    <h2><span class="icon">📶</span> WiFi Status</h2>
+                    <div class="status">
+                        <div class="info">
+                            <p><span class="label">SSID</span><br>simpleconfig</p>
+                            <p><span class="label">Mode</span><br>Mesh Point</p>
+                            <p><span class="label">Mesh Display</span><br>00:30:1A:3B:90:25</p>
+                        </div>
+                        <div class="dropdowns">
+                            <div class="dropdown">
+                                <label>Frequency Band</label>
+                                <select>
+                                    <option>0.915 GHz</option>
+                                </select>
+                            </div>
+                            <div class="dropdown">
+                                <label>Channel</label>
+                                <select>
+                                    <option>12</option>
+                                </select>
+                            </div>
+                            <div class="dropdown">
+                                <label>Bandwidth</label>
+                                <select>
+                                    <option>5 MHz</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signal">
+                        <span class="signal-bars">📶</span> <span class="signal-strength">-33/-95 dBm</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gps-associated">
+                <div class="section gps">
+                    <h2 class="section-title"><span class="icon">⚙️</span> GPS Data</h2>
+                    <div class="gps-info">
+                        <p><span class="label">📍 Latitude</span><br>--</p>
+                        <p><span class="label">📍 Longitude</span><br>--</p>
+                    </div>
+                </div>
+                <!-- Associated Radios Section -->
+                <div class="section associated">
+                    <h2 class="section-title"><span class="icon">📡</span> Associated Radios</h2>
+                    <div class="radio-info">
+                        <div class="radio-header">
+                            <span class="radio-name">📶 <b>simpleconfig (wlan0)</b></span>
+                            <span class="signal-strength">📶 -36/-95 dBm</span>
+                        </div>
+                        <p class="mac-address">🔗 00:30:1A:3B:5A:DF</p>
+                        <div class="txrate-container">
+                            <p class="host"><span class="label">🖥️ Host</span><br><b>Unknown</b></p>
+                            <p class="tx-rate"><span class="label">⚡ TX Rate:</span><br><b>32.5 Mbit/s, 5 MHz, HT, MCS 15</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
